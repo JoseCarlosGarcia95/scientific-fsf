@@ -1,0 +1,12 @@
+[submodule "plugin/reveal-speech"]
+	path = plugin/reveal-speech
+	url = https://github.com/mschmo/reveal-speech.git
+[submodule "plugin/reveal.js-d3js-plugin"]
+	path = plugin/reveal.js-d3js-plugin
+	url = https://github.com/jlegewie/reveal.js-d3js-plugin.git
+[submodule "plugin/reveal.js-diagram-plugin"]
+	path = plugin/reveal.js-diagram-plugin
+	url = https://github.com/teone/reveal.js-diagram-plugin.git
+[submodule "plugin/reveal-svg-fragment"]
+	path = plugin/reveal-svg-fragment
+	url = https://github.com/csachs/reveal-svg-fragment.git
