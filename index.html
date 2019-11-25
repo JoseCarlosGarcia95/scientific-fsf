@@ -40,7 +40,7 @@
 	      <li>Mathics: Una alternativa a Wolfram Mathematica</li>
 	      <li>DEMO</li>
 	      <li>Colaborar en Mathics</li>
-	      <li>Crear un módulo de Jupyter con soporte para Mathics</li>
+	      <li>Crear un módulo de Jupyter</li>
             </ol>
           </section>
 	</section>
@@ -73,9 +73,161 @@
 
 	  <section>
 	    <h2>Ejemplos</h2>
+	    <ul>
+	      
+	      <li class="fragment">
+		Python
+		<ul>
+		  <li lass="fragment">Scipy, Jupyter, Cython, Tensorflow, CVXOPT...</li>
+		</ul>
+	      </li>
+
+	      <li class="fragment">
+		C/C++
+		<ul>
+		  <li class="fragment">OpenCL, OpenMPI, SymbolicC++, GMP...</li> 
+		</ul>
+	      </li>
+	      
+	      <li class="fragment">GNU Octave</li>
+
+	      <li class="fragment">AWK</li>
+
+	      <li class="fragment">R</li>
+
+	      <li class="fragment">GLPK</li>
+	      
+	      <li class="fragment">Prometheus</li>
+	      
+	      <li class="fragment">...</li>
+
+	    </ul>
+
 	  </section>
 	</section>
-	
+
+	<section>
+	  
+	  <section>
+	    <h2>Mathics</h2>
+	    <img src="images/mathics.svg" style=" box-shadow: none; background: none; border: none;" width="150">
+
+	 
+          </section>
+
+	  <section>
+	    <h2>Características</h2>
+
+	    <ul>
+	      <li class="fragment">Cálculo simbólico usando Sympy</li>
+	      <li class="fragment">Creación de módulos y funciones</li>
+	      <li class="fragment">Bucles, condiciones lógicas</li>
+	      <li class="fragment">Gráficos en 2D y 3D</li>
+	      <li class="fragment">Multiplataforma</li>
+	      <li class="fragment">Fácil de colaborar</li>
+	      <li class="fragment">Optimización de funciones con restricciones</li>
+	      <li class="fragment">Soporte para Jupyter</li>
+	    </ul>
+
+	  </section>
+
+	  <section>
+	    <h2>Carencias</h2>
+
+	    <ul>
+	      <li class="fragment">Cálculo numérico <i class="far fa-clock"></i><i class="far fa-clock"></i><i class="far fa-clock"></i></li>
+	      <li class="fragment">Alto rendimiento <i class="far fa-clock"></i><i class="far fa-clock"></i><i class="far fa-clock"></i></li>
+
+	      <li class="fragment">Retrocompatibilidad con Wolfram Mathematica <i class="far fa-clock"></i></li>
+	      <li class="fragment">Programación lineal <i class="far fa-clock"></i></li>
+	      <li class="fragment">Análisis de datos e inteligencia artificial <i class="far fa-clock"></i><i class="far fa-clock"></i></li>
+
+	    </ul>
+
+	  </section>
+
+	  <section>
+	    <h2>
+	      Demo
+	    </h2>
+	    <img src="images/bonobo.png" style=" box-shadow: none; background: none; border: none;" width="150">
+
+	  </section>
+
+	  <section>
+	    <h2>Colaborar con Mathics</h2>
+	    <ol>
+	      <li class="fragment">Revisamos las <i>issues</i> en GitHub</li>
+	      <li class="fragment">Hacemos un fork del proyecto de Mathics desde Github</li>
+	      <li class="fragment">Añadimos la funcionalidad nueva que queremos, y subimos los cambios a Github (<a href="https://github.com/JoseCarlosGarcia95/Mathics/commit/9c781540bd143791d6111a03e23229f0ae6c6d29" target="_blank">Ejemplo</a>)</li>
+	      <li class="fragment">Creamos un pull request</li>
+
+	    </ol>
+
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+	    <h2>Creación de un <i>kernel</i> de Jupyter</h2>
+	    <img src="images/jupyter-logo.png" style=" box-shadow: none; background: none; border: none;" width="150"/>
+	    
+	  </section>
+
+	  <section>
+	    <h2>Extendiendo una clase en Python</h2>
+	    <pre>
+	      <code data-trim data-noescape>
+		from ipykernel.kernelbase import Kernel	
+		...
+		class MyNewKernel(Kernel):
+		  implementation = 'newlanguage'
+		  implementation_version = '1.0'
+		  banner = 'My new Kernel - Implementation'
+		  name = 'NewKernelNotebook'
+		  ...
+		  def do_complete(self, code, cursor_pos):
+		  ...
+		  def do_execute(self, code, silent): </code>
+	    </pre>
+
+	  </section>
+
+	  <section>
+	    <h2>Enviar el resultado a Jupyter</h2>
+	    <pre>
+	      <code data-trim data-noescape>
+		self.send_response(self.iopub_socket, 'display_data', data)
+	      </code>
+	    </pre>
+	      
+	  </section>
+	</section>
+
+
+	<section>
+	  <section>
+	    <h2>Sobre mi</h2>
+	    <ul>
+	      <li>Graduado en Matemáticas por la Universidad de Cádiz</li>
+	      <li>Encargado de proyectos de desarrollo relacionados con Ing. Telecomunicaciones</li>
+	      <li>DevSecOps en Crononauta SL</li>
+	      <li>Alta experiencia en software de análisis de datos como Prometheus</li>
+	      <li>Experiencia en sistemas y entornos clouds (AWS)</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h2>Mis proyectos personales</h2>
+	    <ul>
+	      <li><b>Mi página personal: </b> josecarlos.me</li>
+	      <li><b>Github: </b>JoseCarlosGarcia95</li>
+	      <li><b>Sophie: </b>Un software científico multiuso, extensible y de alto rendimiento </li>
+	    </ul>
+	    
+	  </section>
+	</section>
+
       </div>
     </div>
 
@@ -86,15 +238,18 @@
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
+	  showNotes: true,
+	  slideNumber: true,
+	  controls: true,
+	  progress: true,
+	  history: true,
 	  dependencies: [
 	      { src: 'plugin/markdown/marked.js' },
 	      { src: 'plugin/markdown/markdown.js' },
 	      { src: 'plugin/notes/notes.js', async: true },
 	      { src: 'plugin/highlight/highlight.js', async: true },
 	      { src: 'node_modules/revealjs-animated/dist/revealjs-animated.js', async: true},
-	      { src: 'https://d3js.org/d3.v4.min.js' },
-	      { src: 'plugin/d3js/d3js.js' },
-	      /*{
+	      {
 		  src: "plugin/reveal-speech/speech.js",
 		  callback: function() {
 		      RevealSpeech.configure({
@@ -105,7 +260,7 @@
 			  lang: 'es-ES'                 // default ''
 		      });
 		  }
-	      }*/
+	      }
 	  ]
       });
     </script>
